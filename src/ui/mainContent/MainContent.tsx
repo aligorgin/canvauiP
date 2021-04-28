@@ -6,6 +6,7 @@ import {VideoSvg} from "~/ui/icons/MainSvgs/VideoSvg";
 import {MarketingSvg} from "~/ui/icons/MainSvgs/MarketingSvg";
 import {OfficialSvg} from "~/ui/icons/MainSvgs/OfficeSvg";
 import {MoreSvg} from "~/ui/icons/MainSvgs/MoreSvg";
+import {PrintSvg} from "~/ui/icons/MainSvgs/PrintSvg";
 
 export function MainContent() {
     return (
@@ -19,17 +20,21 @@ export function MainContent() {
                         </div>
                         <div className='flex justify-end'>
                             <div className='relative bottom-5 '>
-                                <button className='bg-gray-400 bg-opacity-20 hover:bg-opacity-30 transition px-4 py-2 text-gray-100 rounded-lg font-semibold'>Custom size</button>
+                                <button
+                                    className='bg-gray-400 bg-opacity-20 hover:bg-opacity-30 transition px-4 py-2 text-gray-100 rounded-lg font-semibold'>
+                                    Custom size
+                                </button>
                             </div>
                         </div>
                         <div className='flex justify-center pt-2'>
                             <PurpleElements label='For you' icon={ForYouSvg}/>
-                            <PurpleElements label='Presentations' icon={PresentationsSvg}/>
-                            <PurpleElements label='Social media' icon={SocialMediaSvg}/>
-                            <PurpleElements label='Video' icon={VideoSvg}/>
-                            <PurpleElements label='Marketing' icon={MarketingSvg}/>
-                            <PurpleElements label='Office' icon={OfficialSvg}/>
-                            <PurpleElements label='More' icon={MoreSvg}/>
+                            <PurpleElements label='Presentations' icon={PresentationsSvg} color='orange'/>
+                            <PurpleElements label='Social media' icon={SocialMediaSvg} color='blue'/>
+                            <PurpleElements label='Video' icon={VideoSvg} color='green'/>
+                            <PurpleElements label='Print Products' icon={PrintSvg} color='pink'/>
+                            <PurpleElements label='Marketing' icon={MarketingSvg} color='yellow'/>
+                            <PurpleElements label='Office' icon={OfficialSvg} color='softBlue'/>
+                            <PurpleElements label='More' icon={MoreSvg} color='black'/>
                         </div>
                     </div>
                     <div className='h-full w-full overflow-hidden'>
@@ -40,7 +45,7 @@ export function MainContent() {
                 </div>
             </div>
 
-            <div className='bg-gray-200 h-48 flex-1'>
+            <div className='bg-gray-200 h-48 w-full flex-1'>
                 thing for purple
             </div>
 
