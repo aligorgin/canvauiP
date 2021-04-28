@@ -16,7 +16,7 @@ export function SideBarNav({label, icon: Icon, nav, svg}: Props) {
             <div className='mr-3'>
                 <Icon className={`${svg === 'folder' && 'w-6 h-6'}`}/>
             </div>
-            <div className={`${nav === 'home' ? 'text-gray-900' : 'text-gray-600'} tracking-tight`}>{label}</div>
+            <div className={`${nav === 'home' ? 'text-gray-900' : 'text-gray-600'}`}>{label}</div>
         </div>
     )
 }

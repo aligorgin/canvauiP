@@ -1,5 +1,5 @@
-import {Header} from "~/ui/Header";
-import {SideBarNav} from "~/ui/SideBarNav";
+import {Header} from "~/ui/header/Header";
+import {SideBarNav} from "~/ui/sidebar/SideBarNav";
 import {DesktopComputerIcon, FolderIcon, HomeIcon} from "@heroicons/react/outline";
 import {HomeSvg} from "~/ui/icons/HomeSvg";
 import {FolderSvg} from "~/ui/icons/FoldersSvg";
@@ -8,7 +8,7 @@ import {SharedSvg} from "~/ui/icons/SharedSvg";
 import {BrandKitSvg} from "~/ui/icons/BrandKitSvg";
 import {TeamSvg} from "~/ui/icons/TeamSvg";
 import {TrashSvg} from "~/ui/icons/TrashSvg";
-import {MainContent} from "~/ui/MainContent";
+import {MainContent} from "~/ui/mainContent/MainContent";
 
 function Numbers() {
     return (
@@ -23,7 +23,7 @@ function Numbers() {
 export default function Home() {
     return (
         <div>
-            <div className='px-7 py-2 shadow-sm sticky w-full top-0 z-50 bg-gray-100 overflow-hidden'>
+            <div className='px-8 py-2 shadow-sm sticky w-full top-0 z-50 bg-gray-100'>
                 <Header/>
             </div>
             <div className='flex min-h-screen'>
@@ -37,7 +37,7 @@ export default function Home() {
                     <SideBarNav label='All your folders' icon={FolderIcon} svg='folder'/>
                     <SideBarNav label='Trash' icon={TrashSvg}/>
                 </div>
-                <div className='flex-1 '>
+                <div className='flex-1'>
                     <MainContent/>
                     <Numbers/>
                 </div>
