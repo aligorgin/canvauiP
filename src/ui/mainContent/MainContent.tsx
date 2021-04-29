@@ -7,6 +7,7 @@ import {MarketingSvg} from "~/ui/icons/MainSvgs/MarketingSvg";
 import {OfficialSvg} from "~/ui/icons/MainSvgs/OfficeSvg";
 import {MoreSvg} from "~/ui/icons/MainSvgs/MoreSvg";
 import {PrintSvg} from "~/ui/icons/MainSvgs/PrintSvg";
+import {UnderPurple} from "~/ui/mainContent/UnderPurple";
 
 export function MainContent() {
     return (
@@ -45,8 +46,12 @@ export function MainContent() {
                 </div>
             </div>
 
-            <div className='bg-gray-200 h-48 w-full flex-1'>
-                thing for purple
+            <div style={{height: '237px'}} className='flex bg-gray-200 mb-12 pt-6 pb-4 rounded-b-lg space-x-6'>
+                <UnderPurple label='Presentation' id={1}/>
+                <UnderPurple label='Poster'/>
+                <UnderPurple label='Infographic'/>
+                <UnderPurple label='Resume'/>
+                {/*<UnderPurple label='logo'/>*/}
             </div>
 
             <div>
