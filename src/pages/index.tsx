@@ -24,12 +24,12 @@ function Numbers() {
 export default function Home() {
     return (
         <div>
-            <div className='px-8 py-2 shadow-sm sticky w-full top-0 z-50 bg-gray-100'>
+            <div className='px-8 py-2 shadow-sm sticky w-full top-0 z-50 bg-gray-100 overflow-hidden'>
                 <Header/>
             </div>
             <div className='flex min-h-screen'>
                 {/*use jit top-[76px  and use jit for main container and use the padding top 76 px*/}
-                <div className='w-64 bg-gray-100 sticky top-24 left-0 h-full'>
+                <div className='w-64 bg-gray-100 sticky top-24 left-0 h-full flex-shrink-0'>
                     <SideBarNav label='Recommended for you' icon={HomeSvg} nav='home'/>
                     <SideBarNav label='All your designs' icon={DesignSvg}/>
                     <SideBarNav label='Shared with you' icon={SharedSvg}/>
@@ -39,7 +39,7 @@ export default function Home() {
                     <SideBarNav label='All your folders' icon={FolderIcon} svg='folder'/>
                     <SideBarNav label='Trash' icon={TrashSvg}/>
                 </div>
-                <div className='flex-1'>
+                <div className='flex-1 min-h-screen w-full m-0'>
                     <MainContent/>
                     <Numbers/>
                 </div>

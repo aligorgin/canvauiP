@@ -8,11 +8,29 @@ import {OfficialSvg} from "~/ui/icons/MainSvgs/OfficeSvg";
 import {MoreSvg} from "~/ui/icons/MainSvgs/MoreSvg";
 import {PrintSvg} from "~/ui/icons/MainSvgs/PrintSvg";
 import {UnderPurple} from "~/ui/mainContent/UnderPurple";
+import {useEffect, useState} from "react";
 
 export function MainContent() {
+
+    const [windowWidth, setWindowWidth] = useState<number>(0);
+
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth)
+    };
+    useEffect(() => {
+        setWindowWidth(window.innerWidth)
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+    }, []);
+
+    console.log(windowWidth)
+
     return (
-        <div className='pt-9 pr-9 pb-12 pl-4 flex-col'>
-            <div className='relative'>
+        <div style={{width:`${windowWidth-274}px`}} className='flex pt-8 pr-8 pb-12 pl-4 flex-col m-0 overflow-x-hidden overflow-y-auto whitespace-nowrap'>
+            <div className='relative '>
                 <div className='flex-1 h-48 '>
                     <div className='absolute flex-col px-4 w-full h-full'>
                         <div className='relative top-5'>
@@ -46,12 +64,16 @@ export function MainContent() {
                 </div>
             </div>
 
-            <div style={{height: '237px'}} className='flex bg-gray-200 mb-12 pt-6 pb-4 rounded-b-lg space-x-6'>
-                <UnderPurple label='Presentation' id={1}/>
-                <UnderPurple label='Poster'/>
-                <UnderPurple label='Infographic'/>
-                <UnderPurple label='Resume'/>
-                {/*<UnderPurple label='logo'/>*/}
+            <div style={{height: '237px'}} className='bg-gray-200 mb-12 pt-6 pb-4 rounded-b-lg '>
+                <div className='flex space-x-6 h-full max-w-full overflow-y-hidden overflow-x-auto whitespace-nowrap'>
+                    <UnderPurple label='Presentation' id={1}/>
+                    <UnderPurple label='Poster'/>
+                    <UnderPurple label='Infographic'/>
+                    <UnderPurple label='Resume'/>
+                    <UnderPurple label='logo'/>
+                    <UnderPurple label='logo'/>
+                    <UnderPurple label='logo'/>
+                </div>
             </div>
 
             <div>

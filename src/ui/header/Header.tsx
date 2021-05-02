@@ -6,7 +6,7 @@ import {CanvaSvg} from "~/ui/icons/CanvaSvg";
 
 export function Header() {
     return (
-        <div className='flex justify-between items-center '>
+        <div className='flex justify-between items-center'>
             <div className='cursor-pointer'>
                 <CanvaSvg/>
             </div>
