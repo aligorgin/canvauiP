@@ -48,7 +48,6 @@ export function MainContent() {
                         </div>
                         <div className='flex justify-center pt-2'>
                             <PurpleElements label='For you' icon={ForYouSvg}/>
-                            <PurpleElements label='Presentations' icon={PresentationsSvg} color='orange'/>
                             <PurpleElements label='Social media' icon={SocialMediaSvg} color='blue'/>
                             <PurpleElements label='Video' icon={VideoSvg} color='green'/>
                             <PurpleElements label='Print Products' icon={PrintSvg} color='pink'/>

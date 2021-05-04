@@ -11,7 +11,7 @@ interface Props {
 export function PurpleElements({icon: Icon, label, color = 'purple'}: Props) {
 
     return (
-        <div className='flex flex-col w-24 items-center cursor-pointer'>
+        <div className='flex flex-col w-28 items-center cursor-pointer'>
             <div
                 className={clsx('shadow text-gray-100  hover:bg-gray-100 hover:opacity-100  p-3 rounded-full transform hover:scale-105 transition',
                     color === 'purple' && 'bg-gray-100 text-purple-700',
