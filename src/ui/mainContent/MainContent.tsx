@@ -9,6 +9,8 @@ import {MoreSvg} from "~/ui/icons/MainSvgs/MoreSvg";
 import {PrintSvg} from "~/ui/icons/MainSvgs/PrintSvg";
 import {UnderPurple} from "~/ui/mainContent/UnderPurple";
 import {useEffect, useState} from "react";
+import {YourDesigns} from "~/ui/mainContent/YourDesigns";
+import {Templates} from "~/ui/mainContent/Templates";
 
 export function MainContent() {
 
@@ -26,10 +28,9 @@ export function MainContent() {
         }
     }, []);
 
-    console.log(windowWidth)
-
     return (
-        <div style={{width:`${windowWidth-274}px`}} className='flex pt-8 pr-8 pb-12 pl-4 flex-col m-0 overflow-x-hidden overflow-y-auto whitespace-nowrap'>
+        <div style={{width: `${windowWidth - 274}px`}}
+             className='flex pt-8 pr-8 pb-12 pl-4 flex-col m-0 overflow-x-hidden overflow-y-auto whitespace-nowrap'>
             <div className='relative '>
                 <div className='flex-1 h-48 '>
                     <div className='absolute flex-col px-4 w-full h-full'>
@@ -64,7 +65,7 @@ export function MainContent() {
                 </div>
             </div>
 
-            <div style={{height: '237px'}} className='bg-gray-200 mb-12 pt-6 pb-4 rounded-b-lg '>
+            <div style={{height: '237px'}} className='bg-gray-100 mb-12 pt-6 pb-4 rounded-b-lg '>
                 <div className='flex space-x-6 h-full max-w-full overflow-y-hidden overflow-x-auto whitespace-nowrap'>
                     <UnderPurple label='Presentation' id={1}/>
                     <UnderPurple label='Poster'/>
@@ -73,28 +74,27 @@ export function MainContent() {
                     <UnderPurple label='logo'/>
                     <UnderPurple label='logo'/>
                     <UnderPurple label='logo'/>
+                    <UnderPurple label='logo'/>
+                    <UnderPurple label='logo'/>
+                    <UnderPurple label='logo'/>
+                    <UnderPurple label='logo'/>
+                    <UnderPurple label='logo'/>
+                    <UnderPurple label='logo'/>
+                    <UnderPurple label='logo'/>
+                    <UnderPurple label='logo'/>
+                    <UnderPurple label='logo'/>
                 </div>
             </div>
 
-            <div>
-                your design
-            </div>
+            <YourDesigns/>
 
-            <div>
-                instgram posts
-            </div>
-
-            <div>
-                a4 acounts
-            </div>
-
-            <div>
-                posters
-            </div>
-
-            <div>
-                instagram stroies
-            </div>
+            <Templates label='Instagram Post' width={224} height={224}/>
+            <Templates label='Instagram Stories' width={224} height={398}/>
+            <Templates label='Logos' width={224} height={224}/>
+            <Templates label='Your Stories' width={224} height={398}/>
+            <Templates label='Presentations' width={224} height={126}/>
+            <Templates label='Instagram Post' width={224} height={316}/>
+            <Templates label='Cards' width={224} height={159}/>
         </div>
     )
 }

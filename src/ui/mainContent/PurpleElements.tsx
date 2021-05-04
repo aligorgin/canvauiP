@@ -30,7 +30,7 @@ export function PurpleElements({icon: Icon, label, color = 'purple'}: Props) {
                 <Icon/>
             </div>
             <div className={clsx('text-sm text-white pt-2',color ==='purple' && 'font-medium')}>{label}</div>
-            {color === 'purple' && <div className='bg-gray-100 w-4 h-4 rotate-45 transform mt-4 bg-gray-200'/>}
+            {color === 'purple' && <div className='bg-gray-100 w-4 h-4 rotate-45 transform mt-4 bg-gray-100'/>}
         </div>
     )
 }
