@@ -15,7 +15,7 @@ import {Planner} from "~/ui/icons/Planner";
 export default function Home() {
     return (
         <div>
-            <div className='px-8 py-2 shadow-sm sticky w-full bg-white top-0 z-50 overflow-hidden'>
+            <div className='px-8 shadow-sm sticky w-full bg-white top-0 z-50 overflow-hidden'>
                 <Header/>
             </div>
             <div className='flex min-h-screen'>
@@ -33,6 +33,11 @@ export default function Home() {
                 <div className='flex-1 min-h-screen w-full m-0'>
                     <MainContent/>
                 </div>
+            </div>
+            <div
+                className='h-10 w-20 fixed flex items-center right-0 bottom-4 bg-purple-700 hover:bg-purple-600 cursor-pointer px-4 rounded-full text-white text-center'>
+                <div>Help</div>
+                <span className='font-semibold px-2 text-lg'>?</span>
             </div>
         </div>
     )
