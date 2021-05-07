@@ -11,25 +11,23 @@ export function Header() {
                 <CanvaSvg/>
             </div>
 
-            <div className='flex ml-5 mr-9 space-x-1 items-center cursor-pointer'>
-                <div className='bg-gray-100 font-semibold px-3 py-2 rounded'>Home</div>
-                <span>
+            <div className='flex ml-5 mr-9 space-x-1 items-center cursor-pointer hidden htm:inline-flex'>
+                <div className='bg-gray-100 font-semibold px-3 py-2 rounded hidden htm:inline-block'>Home</div>
+                <span className='hidden gglg:inline-block'>
                     <NavElements label='Templates'/>
                 </span>
-                <span>
+                <span className='hidden glg:inline-block'>
                     <NavElements label='Features'/>
                 </span>
-                <span className=''>
+                <span className='hidden lgg:inline-block'>
                     <NavElements label='Learn'/>
                 </span>
                 <span className='hidden xl:inline-block'>
                     <NavElements label='Pricing'/>
                 </span>
-
-
             </div>
 
-            <div className='flex-1 w-full'>
+            <div className='flex-1 w-full htm:ml-0 ml-4'>
                 <SearchInput/>
             </div>
             <div className='flex'>

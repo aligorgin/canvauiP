@@ -28,12 +28,12 @@ export function Templates({label, width, height}: Props) {
                 <div className='text-gray-500 hover:text-black transition cursor-pointer text-sm font-medium'>See all</div>
             </div>
 
-            <div style={{width: `${windowWidth - 320}px`}}>
+            <div style={{width: `${windowWidth> 898? windowWidth - 320 : windowWidth }px`}}>
                 <div className='flex space-x-6 h-full max-w-full overflow-y-hidden overflow-x-auto whitespace-nowrap'>
 
-                    {Array.from({length: 10}, (_) => {
+                    {Array.from({length: 10}, (_,i) => {
                         return (
-                            <div style={{width: `${width}px`, height: `${height}px`}}
+                            <div key={i} style={{width: `${width}px`, height: `${height}px`}}
                                  className='cursor-pointer object-cover flex-shrink-0'>
                                 <img
                                     className='w-full h-full rounded-md object-cover'

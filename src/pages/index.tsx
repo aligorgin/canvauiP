@@ -20,7 +20,7 @@ export default function Home() {
             </div>
             <div className='flex min-h-screen'>
                 {/*use jit top-[76px  and use jit for main container and use the padding top 76 px*/}
-                <div className='w-64 sticky top-24 left-0 h-full flex-shrink-0'>
+                <div className='w-64 sticky top-24 left-0 h-full flex-shrink-0 hidden htm:block'>
                     <SideBarNav label='Recommended for you' icon={HomeSvg} nav='home'/>
                     <SideBarNav label='All your designs' icon={DesignSvg}/>
                     <SideBarNav label='Shared with you' icon={SharedSvg}/>

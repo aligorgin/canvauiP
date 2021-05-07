@@ -29,8 +29,8 @@ export function MainContent() {
     }, []);
 
     return (
-        <div style={{width: `${windowWidth - 274}px`}}
-             className='flex pt-8 pr-8 pb-12 pl-4 flex-col m-0 overflow-x-hidden overflow-y-auto whitespace-nowrap'>
+        <div style={{width: `${windowWidth> 898? windowWidth - 274 : windowWidth-46}px`}}
+             className='flex pt-8 htm:pr-8 pb-12 pl-4 flex-col m-0 overflow-x-hidden overflow-y-auto whitespace-nowrap'>
             <div className='relative '>
                 <div className='flex-1 h-48 '>
                     <div className='absolute flex-col px-4 w-full h-full'>
