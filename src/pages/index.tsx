@@ -10,6 +10,7 @@ import {TeamSvg} from "~/ui/icons/TeamSvg";
 import {TrashSvg} from "~/ui/icons/TrashSvg";
 import {MainContent} from "~/ui/mainContent/MainContent";
 import {Planner} from "~/ui/icons/Planner";
+import {PlusSvg} from "~/ui/icons/PlusSvg";
 
 
 export default function Home() {
@@ -34,11 +35,19 @@ export default function Home() {
                     <MainContent/>
                 </div>
             </div>
-            <div
-                className='h-10 w-20 fixed flex items-center right-0 bottom-4 bg-purple-700 hover:bg-purple-600 cursor-pointer px-4 rounded-full text-white text-center'>
-                <div>Help</div>
-                <span className='font-semibold px-2 text-lg'>?</span>
+            <div className='hidden ssm:block'>
+                <div
+                    className='fixed h-10 w-20 flex items-center right-0 bottom-4 bg-purple-700 hover:bg-purple-600 cursor-pointer px-4 rounded-full text-white text-center'>
+                    <div>Help</div>
+                    <span className='font-semibold px-2 text-lg'>?</span>
+                </div>
             </div>
-        </div>
+            <div className='ssm:hidden'>
+                <div className='p-4 bg-purple-700 fixed right-0 bottom-4 rounded-full text-white cursor-pointer transform hover:scale-95 duration-75'>
+                    <PlusSvg/>
+                </div>
+            </div>
+            </div>
+
     )
 }
