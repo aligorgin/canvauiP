@@ -29,7 +29,7 @@ export function MainContent() {
     }, []);
 
     return (
-        <div style={{width: `${windowWidth> 898? windowWidth - 274 : windowWidth-46}px`}}
+        <div style={{width: `${windowWidth > 898 ? windowWidth - 274 : windowWidth - 46}px`}}
              className='flex pt-8 htm:pr-8 pb-12 pl-4 flex-col m-0 overflow-x-hidden overflow-y-auto whitespace-nowrap'>
             <div className='relative '>
                 <div className='flex-1 h-48 '>
@@ -51,8 +51,12 @@ export function MainContent() {
                             <PurpleElements label='Social media' icon={SocialMediaSvg} color='blue'/>
                             <PurpleElements label='Video' icon={VideoSvg} color='green'/>
                             <PurpleElements label='Print Products' icon={PrintSvg} color='pink'/>
-                            <PurpleElements label='Marketing' icon={MarketingSvg} color='yellow'/>
-                            <PurpleElements label='Office' icon={OfficialSvg} color='softBlue'/>
+                            <span className='hidden xl:inline-block'>
+                                <PurpleElements label='Marketing' icon={MarketingSvg} color='yellow'/>
+                            </span>
+                            <span className='hidden xl:inline-block'>
+                                <PurpleElements label='Office' icon={OfficialSvg} color='softBlue'/>
+                            </span>
                             <PurpleElements label='More' icon={MoreSvg} color='black'/>
                         </div>
                     </div>
