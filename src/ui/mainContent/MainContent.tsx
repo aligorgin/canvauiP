@@ -91,13 +91,34 @@ export function MainContent() {
 
             <YourDesigns/>
 
-            <Templates label='Instagram Post' width={224} height={224}/>
-            <Templates label='Instagram Stories' width={224} height={398}/>
-            <Templates label='Logos' width={224} height={224}/>
-            <Templates label='Your Stories' width={224} height={398}/>
-            <Templates label='Presentations' width={224} height={126}/>
-            <Templates label='Instagram Post' width={224} height={316}/>
-            <Templates label='Cards' width={224} height={159}/>
+            <Templates label='Instagram Post'
+                       width={windowWidth > 1200 ? 224 : windowWidth > 900 ? 164 : 112}
+                       height={windowWidth > 1200 ? 224 : windowWidth > 900 ? 164 : 112}
+            />
+            <Templates label='Instagram Stories'
+                       width={windowWidth > 1200 ? 224 : windowWidth > 900 ? 164 : 104}
+                       height={windowWidth > 1200 ? 398 : windowWidth > 900 ? 291 : 184}
+            />
+            <Templates label='Logos'
+                       width={windowWidth > 1200 ? 224 : windowWidth > 900 ? 164 : 112}
+                       height={windowWidth > 1200 ? 224 : windowWidth > 900 ? 164 : 112}
+            />
+            <Templates label='Your Stories'
+                       width={windowWidth > 1200 ? 224 : windowWidth > 900 ? 164 : 104}
+                       height={windowWidth > 1200 ? 398 : windowWidth > 900 ? 291 : 184}
+            />
+            <Templates label='Presentations'
+                       width={windowWidth > 1200 ? 224 : 199}
+                       height={windowWidth > 1200 ? 224 : 112}
+            />
+            <Templates label='Posters'
+                       width={windowWidth > 1200 ? 237 : windowWidth > 900 ? 173 : 110}
+                       height={windowWidth > 1200 ? 335 : windowWidth > 900 ? 245 : 155}
+            />
+            <Templates label='Cards'
+                       width={windowWidth > 1200 ? 224 : windowWidth > 900 ? 164 : 157}
+                       height={windowWidth > 1200 ? 160 : windowWidth > 900 ? 116 : 112}
+            />
         </div>
     )
 }

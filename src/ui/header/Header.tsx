@@ -7,7 +7,7 @@ import {DotsBlack} from "~/ui/icons/DotsBlack";
 
 export function Header() {
     return (
-        <div style={{height: '72px'}} className='flex justify-between items-center'>
+        <div style={{minHeight: '72px'}} className='flex justify-between items-center'>
             <div className='cursor-pointer'>
                 <CanvaSvg/>
             </div>
@@ -26,9 +26,14 @@ export function Header() {
                 <span className='hidden xl:inline-block'>
                     <NavElements label='Pricing'/>
                 </span>
-                <span className='py-2 px-1.5 hover:bg-gray-100 rounded xl:hidden'>
+                {/*todo:fix this*/}
+                <div className='py-2 px-1.5 hover:bg-gray-100 rounded xl:hidden focus:outline-none relative'>
                     <DotsBlack/>
-                </span>
+                    <div style={{minHeight: '4.75rem'}}
+                         className='w-64 absolute -bottom-20 -left-12 bg-red-900 overflow-y-auto'>
+                        <div>Pricing</div>
+                    </div>
+                </div>
             </div>
 
             <div className='flex-1 w-full htm:ml-0 ml-4'>
@@ -44,7 +49,7 @@ export function Header() {
             </div>
             <div className='flex'>
                 <div
-                    className='rounded bg-purple-700 px-4 py-2 text-white mx-2 h-10 hover:bg-purple-600 cursor-pointer font-semibold'>Create
+                    className='whitespace-nowrap rounded bg-purple-700 px-4 py-2 text-white mx-2 h-10 hover:bg-purple-600 cursor-pointer font-semibold'>Create
                     a design
                 </div>
                 <div className='bg-yellow-500 rounded-full text-center px-3 py-0.5 text-2xl cursor-pointer'>A</div>
