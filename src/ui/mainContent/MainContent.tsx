@@ -41,7 +41,7 @@ export function MainContent() {
                         <div className='flex justify-end'>
                             <div className='relative bottom-5 '>
                                 <button
-                                    className='bg-gray-400 bg-opacity-20 hover:bg-opacity-30 transition px-4 py-2 text-gray-100 rounded-lg font-semibold'>
+                                    className='invisible sm:visible bg-gray-400 bg-opacity-20 hover:bg-opacity-30 transition px-4 py-2 text-gray-100 rounded-lg font-semibold'>
                                     Custom size
                                 </button>
                             </div>

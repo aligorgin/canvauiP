@@ -3,12 +3,13 @@ import {SearchInput} from "~/ui/header/SearchInput";
 import {QuestionSvg} from "~/ui/icons/QuestionSvg";
 import {SettingSvg} from "~/ui/icons/SettingSvg";
 import {CanvaSvg} from "~/ui/icons/CanvaSvg";
-import {DotsBlack} from "~/ui/icons/DotsBlack";
+
+import {DotsBlackClick} from "~/ui/header/DotsBlackClick";
 
 export function Header() {
     return (
         <div style={{minHeight: '72px'}} className='flex justify-between items-center'>
-            <div className='cursor-pointer'>
+            <div className='cursor-pointer hidden ssm:inline-block'>
                 <CanvaSvg/>
             </div>
 
@@ -26,20 +27,15 @@ export function Header() {
                 <span className='hidden xl:inline-block'>
                     <NavElements label='Pricing'/>
                 </span>
-                {/*todo:fix this*/}
                 <div className='py-2 px-1.5 hover:bg-gray-100 rounded xl:hidden focus:outline-none relative'>
-                    <DotsBlack/>
-                    <div style={{minHeight: '4.75rem'}}
-                         className='w-64 absolute -bottom-20 -left-12 bg-red-900 overflow-y-auto'>
-                        <div>Pricing</div>
-                    </div>
+                    <DotsBlackClick/>
                 </div>
             </div>
 
-            <div className='flex-1 w-full htm:ml-0 ml-4'>
+            <div className='flex-1 w-full htm:ml-0 ml-4 '>
                 <SearchInput/>
             </div>
-            <div className='flex'>
+            <div className='hidden ssm:flex'>
                 <div className='hover:bg-gray-100 rounded py-2 px-1.5 ml-2 cursor-pointer'>
                     <QuestionSvg/>
                 </div>
@@ -47,7 +43,7 @@ export function Header() {
                     <SettingSvg/>
                 </div>
             </div>
-            <div className='flex'>
+            <div className='hidden ssm:flex'>
                 <div
                     className='whitespace-nowrap rounded bg-purple-700 px-4 py-2 text-white mx-2 h-10 hover:bg-purple-600 cursor-pointer font-semibold'>Create
                     a design
