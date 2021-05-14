@@ -16,6 +16,8 @@ import {PlusSvg} from "~/ui/icons/PlusSvg";
 export default function Home() {
     return (
         <div>
+            <title>Next</title>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <div className='px-8 shadow-sm sticky w-full bg-white top-0 z-20 overflow-hidden'>
                 <Header/>
             </div>
